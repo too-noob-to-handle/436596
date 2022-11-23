@@ -39,12 +39,14 @@ def clean_download(path: str):
         except:
             pass
 
+DOWNLOAD_DIRS= "/home/bdhpaid/ddr2/app/dc2/download"
+
 def start_cleanup():
     try:
-        rmtree(DOWNLOAD_DIR)
+        rmtree(DOWNLOAD_DIRS)
     except:
         pass
-    makedirs(DOWNLOAD_DIR)
+    makedirs(DOWNLOAD_DIRS)
 
 def clean_all():
     aria2.remove_all(True)
